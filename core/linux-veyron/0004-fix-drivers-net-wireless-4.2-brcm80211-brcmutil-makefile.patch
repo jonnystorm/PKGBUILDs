@@ -1,0 +1,15 @@
+diff --git a/drivers/net/wireless-4.2/brcm80211/brcmutil/Makefile b/drivers/net/wireless-4.2/brcm80211/brcmutil/Makefile
+index 8a9281840..e16051a5d 100644
+--- a/drivers/net/wireless-4.2/brcm80211/brcmutil/Makefile
++++ b/drivers/net/wireless-4.2/brcm80211/brcmutil/Makefile
+@@ -16,8 +16,8 @@
+ # CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ 
+ ccflags-y :=				\
+-	-Idrivers/net/wireless/brcm80211/brcmutil \
+-	-Idrivers/net/wireless/brcm80211/include
++	-Idrivers/net/wireless-4.2/brcm80211/brcmutil \
++	-Idrivers/net/wireless-4.2/brcm80211/include
+ 
+ obj-$(CONFIG_BRCMUTIL)	+= brcmutil.o
+ brcmutil-objs	= utils.o d11.o

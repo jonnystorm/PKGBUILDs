@@ -1,0 +1,17 @@
+diff --git a/drivers/net/wireless-4.2/brcm80211/brcmsmac/Makefile b/drivers/net/wireless-4.2/brcm80211/brcmsmac/Makefile
+index 32464accc..71579f82f 100644
+--- a/drivers/net/wireless-4.2/brcm80211/brcmsmac/Makefile
++++ b/drivers/net/wireless-4.2/brcm80211/brcmsmac/Makefile
+@@ -17,9 +17,9 @@
+ 
+ ccflags-y := \
+ 	-D__CHECK_ENDIAN__ \
+-	-Idrivers/net/wireless/brcm80211/brcmsmac \
+-	-Idrivers/net/wireless/brcm80211/brcmsmac/phy \
+-	-Idrivers/net/wireless/brcm80211/include
++	-Idrivers/net/wireless-4.2/brcm80211/brcmsmac \
++	-Idrivers/net/wireless-4.2/brcm80211/brcmsmac/phy \
++	-Idrivers/net/wireless-4.2/brcm80211/include
+ 
+ brcmsmac-y := \
+ 	mac80211_if.o \

@@ -1,0 +1,15 @@
+diff --git a/drivers/net/wireless-4.2/brcm80211/brcmfmac/Makefile b/drivers/net/wireless-4.2/brcm80211/brcmfmac/Makefile
+index dc4c75083..2ca47dbbd 100644
+--- a/drivers/net/wireless-4.2/brcm80211/brcmfmac/Makefile
++++ b/drivers/net/wireless-4.2/brcm80211/brcmfmac/Makefile
+@@ -16,8 +16,8 @@
+ # CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ 
+ ccflags-y += \
+-	-Idrivers/net/wireless/brcm80211/brcmfmac	\
+-	-Idrivers/net/wireless/brcm80211/include
++	-Idrivers/net/wireless-4.2/brcm80211/brcmfmac	\
++	-Idrivers/net/wireless-4.2/brcm80211/include
+ 
+ ccflags-y += -D__CHECK_ENDIAN__
+ 

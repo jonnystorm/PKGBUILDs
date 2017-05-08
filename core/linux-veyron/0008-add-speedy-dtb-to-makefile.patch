@@ -1,0 +1,14 @@
+diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
+index 142b39911..aca40f85d 100644
+--- a/arch/arm/boot/dts/Makefile
++++ b/arch/arm/boot/dts/Makefile
+@@ -370,7 +370,8 @@ dtb-$(CONFIG_ARCH_ROCKCHIP) += \
+ 	rk3066a-bqcurie2.dtb \
+ 	rk3188-radxarock.dtb \
+ 	rk3288-evb-act8846.dtb \
+-	rk3288-evb-rk808.dtb
++	rk3288-evb-rk808.dtb \
++	rk3288-veyron-speedy.dtb
+ dtb-$(CONFIG_ARCH_S3C24XX) += s3c2416-smdk2416.dtb
+ dtb-$(CONFIG_ARCH_S3C64XX) += s3c6410-mini6410.dtb \
+ 	s3c6410-smdk6410.dtb

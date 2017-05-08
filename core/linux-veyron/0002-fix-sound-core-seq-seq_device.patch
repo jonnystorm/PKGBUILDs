@@ -1,0 +1,22 @@
+diff --git a/sound/core/seq/seq_device.c b/sound/core/seq/seq_device.c
+index 1828b08ec..069d28221 100644
+--- a/sound/core/seq/seq_device.c
++++ b/sound/core/seq/seq_device.c
+@@ -537,7 +537,7 @@ static void unlock_driver(struct ops_list *ops)
+ 
+ static int __init alsa_seq_device_init(void)
+ {
+-#ifdef CONFIG_PROC_FS
++#ifdef CONFIG_SND_PROC_FS
+ 	info_entry = snd_info_create_module_entry(THIS_MODULE, "drivers",
+ 						  snd_seq_root);
+ 	if (info_entry == NULL)
+@@ -555,7 +555,7 @@ static int __init alsa_seq_device_init(void)
+ static void __exit alsa_seq_device_exit(void)
+ {
+ 	remove_drivers();
+-#ifdef CONFIG_PROC_FS
++#ifdef CONFIG_SND_PROC_FS
+ 	snd_info_free_entry(info_entry);
+ #endif
+ 	if (num_ops)
