@@ -45,7 +45,7 @@ source=(https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive
         cmdline
         brcmfmac4354-sdio.txt
         99-veyron-brcm.rules)
-md5sums=(893f29113ec00c2a93b95ba206d2d301  # cc24b65fe6baf4a6c5eb4a9c9b98631cef489a98.tar.gz
+md5sums=(SKIP                              # cc24b65fe6baf4a6c5eb4a9c9b98631cef489a98.tar.gz
          bda543cb5943eac34e16d12911f3ee99  # sd8787_uapsta_cros.bin
          5e2d7cd74de07d13052de99411c13a2f  # sd8797_uapsta_cros.bin
          1534c1dbfe5df35a5634072f7b912840  # sd8897_uapsta_cros.bin
@@ -68,11 +68,11 @@ md5sums=(893f29113ec00c2a93b95ba206d2d301  # cc24b65fe6baf4a6c5eb4a9c9b98631cef4
          20aab44d3bac9ca01f38308017fff155  # 0005-fix-drivers-net-wireless-4.2-brcm80211-brcmfmac-makefile.patch
          aa4ff0619425a35f89aab70d11085b7f  # 0006-fix-drivers-staging-wlan-ng-cfg80211.patch
          5eede750d68afeb3a94a64212b142b55  # 0007-fix-include-linux-mmc-sdio_ids.patch
-         2d3499e765e8ecbd5901225eee2c736b  # 0008-add-speedy-dtb-to-makefile.patch
+         0561c2a403cde02e69d3c71ced1777f6  # 0008-add-speedy-dtb-to-makefile.patch
          bb88b8f4de61b003762585f44e2c8154  # 0009-fix-brcmfmac-oops-and-race-condition.patch
          0a3f2721f0fdf144ec5ac94c41071fca  # 0010-UPSTREAM-soc-rockchip-add-handler-for-usb-uart-funct.patch
          7680ec71bb51b28a0a7cb0c4c3c92175  # config
-         3bf865152d74e844b1f13eb26e6a48da
+         e21666c3ebc82f57021c6311eb351a65  # kernel.its
          61c5ff73c136ed07a7aadbf58db3d96a
          584777ae88bce2c5659960151b64c7d8
          e3bdf63d5d936fb982c4cd62da1433ad
@@ -100,13 +100,14 @@ prepare() {
   local boot_dts_dir=arch/arm/boot/dts
   local dt_bindings_dir=include/dt-bindings
 
-  cp rk3288-veyron-speedy.dts        $boot_dts_dir/
-  cp rk3288-veyron-chromebook.dtsi   $boot_dts_dir/
-  cp cros-ec-sbs.dtsi                $boot_dts_dir/
-  cp rk3288-veyron-sdmmc.dtsi        $boot_dts_dir/
-  cp rk3288-veyron-analog-audio.dtsi $boot_dts_dir/
-  cp rk3288-veyron.dtsi              $boot_dts_dir/
-  cp rk3288.dtsi                     $boot_dts_dir/
+  #cp rk3288-veyron-speedy.dts        $boot_dts_dir/
+  #cp rk3288-veyron-chromebook.dtsi   $boot_dts_dir/
+  #cp cros-ec-sbs.dtsi                $boot_dts_dir/
+  #cp rk3288-veyron-sdmmc.dtsi        $boot_dts_dir/
+  #cp rk3288-veyron-analog-audio.dtsi $boot_dts_dir/
+  #cp rk3288-veyron.dtsi              $boot_dts_dir/
+  #cp rk3288.dtsi                     $boot_dts_dir/
+  cp -r /home/alarm/dts-3.14/*        $boot_dts_dir/
   cp rockchip.h                      $dt_bindings_dir/pinctrl/
   cp rk3288-power.h                  $dt_bindings_dir/power/
   cp rockchip,boot-mode.h            $dt_bindings_dir/soc/
