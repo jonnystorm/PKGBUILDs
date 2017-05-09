@@ -36,6 +36,8 @@ source=(https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive
         0006-fix-drivers-staging-wlan-ng-cfg80211.patch
         0007-fix-include-linux-mmc-sdio_ids.patch
         0008-add-speedy-dtb-to-makefile.patch
+        0009-fix-brcmfmac-oops-and-race-condition.patch
+        0010-UPSTREAM-soc-rockchip-add-handler-for-usb-uart-funct.patch
         config
         kernel.its
         kernel.keyblock
@@ -43,7 +45,7 @@ source=(https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive
         cmdline
         brcmfmac4354-sdio.txt
         99-veyron-brcm.rules)
-md5sums=(8a616276de2b3aacd69cf4804dbaf340  # 8a616276de2b3aacd69cf4804dbaf340.tar.gz
+md5sums=(893f29113ec00c2a93b95ba206d2d301  # cc24b65fe6baf4a6c5eb4a9c9b98631cef489a98.tar.gz
          bda543cb5943eac34e16d12911f3ee99  # sd8787_uapsta_cros.bin
          5e2d7cd74de07d13052de99411c13a2f  # sd8797_uapsta_cros.bin
          1534c1dbfe5df35a5634072f7b912840  # sd8897_uapsta_cros.bin
@@ -67,7 +69,9 @@ md5sums=(8a616276de2b3aacd69cf4804dbaf340  # 8a616276de2b3aacd69cf4804dbaf340.ta
          aa4ff0619425a35f89aab70d11085b7f  # 0006-fix-drivers-staging-wlan-ng-cfg80211.patch
          5eede750d68afeb3a94a64212b142b55  # 0007-fix-include-linux-mmc-sdio_ids.patch
          2d3499e765e8ecbd5901225eee2c736b  # 0008-add-speedy-dtb-to-makefile.patch
-         51a452857c3b4b5d9fd38f5f34a8221f
+         bb88b8f4de61b003762585f44e2c8154  # 0009-fix-brcmfmac-oops-and-race-condition.patch
+         0a3f2721f0fdf144ec5ac94c41071fca  # 0010-UPSTREAM-soc-rockchip-add-handler-for-usb-uart-funct.patch
+         7680ec71bb51b28a0a7cb0c4c3c92175  # config
          3bf865152d74e844b1f13eb26e6a48da
          61c5ff73c136ed07a7aadbf58db3d96a
          584777ae88bce2c5659960151b64c7d8
@@ -85,6 +89,8 @@ prepare() {
     0006-fix-drivers-staging-wlan-ng-cfg80211.patch
     0007-fix-include-linux-mmc-sdio_ids.patch
     0008-add-speedy-dtb-to-makefile.patch
+    0009-fix-brcmfmac-oops-and-race-condition.patch
+    0010-UPSTREAM-soc-rockchip-add-handler-for-usb-uart-funct.patch
   )
 
   for p in ${patches[@]}; do
